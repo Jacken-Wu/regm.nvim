@@ -1,5 +1,7 @@
 # regm.nvim
 
+**My code is terrible and may have some bugs, please use it with caution.**
+
 [中文请点我](./doc/zh_CN.md)
 
 ## What can this plugin do?
@@ -34,7 +36,12 @@ vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR> 
 
 The function `regm#ShowClipboardRegisters(mode, command)` has two arguments:
 
-- `mode`: the mode of the operation, can be `copy` or `paste`.
-- `command`: the command to execute after the register is selected.
+- `mode`: the mode of the operation, can be `copy` or `paste`
+- `command`: the command to execute after the register is selected
 
-When this function runs, it will open a floating window that lists all non-empty registers. You can use `<C-j>/<C-k>/J/K` to move the cursor, `<CR>` to select the current register, and `register name` to select a register by name (for example, you can type `a` to select the `a` register).
+When this function runs, it will open a floating window that lists all non-empty registers. You can:
+
+- use `<C-j>/<C-k>/J/K` to move the cursor
+- use `<C-c>/<Esc>` to close the window
+- use `<CR>` to select the current register
+- use `register name` to select a register by name (for example, you can type `a` to select the `a` register)
