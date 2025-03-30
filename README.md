@@ -36,7 +36,7 @@ vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR> 
 
 The function `regm#ShowClipboardRegisters(mode, command)` has two arguments:
 
-- `mode`: the mode of the operation, can be `copy` or `paste`
+- `mode`: the mode of the operation, can be `'copy'` or `'paste'`
 - `command`: the command to execute after the register is selected
 
 When this function runs, it will open a floating window that lists all non-empty registers. You can:
