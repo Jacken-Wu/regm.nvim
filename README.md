@@ -2,6 +2,8 @@
 
 **My code is terrible and may have some bugs, please use it with caution.**
 
+**This plugin is only for Neovim, and it doesn't work in Vim. Because I use nvim_open_win() to create the floating window, which is not supported in Vim.**
+
 https://github.com/user-attachments/assets/4b20935a-e062-452f-85d3-872c8339495c
 
 [中文请点我](./doc/zh_CN.md)
