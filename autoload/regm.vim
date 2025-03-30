@@ -65,12 +65,16 @@ function! regm#ShowClipboardRegisters(copy_or_paste, yp_command) abort
                 let index = index < len(s:reg_list_non_empty) ? index + 1 : index
             endif
         endfor
-        call nvim_win_set_cursor(s:win, [index, 1])
+        call nvim_win_set_cursor(s:win, [index, 0])
     endfunction
     call nvim_buf_set_keymap(buf, 'n', '<C-j>', '<cmd>call Move("down", 1)<CR>', {'nowait': v:true, 'silent': v:true})
     call nvim_buf_set_keymap(buf, 'n', '<C-k>', '<cmd>call Move("up", 1)<CR>', {'nowait': v:true, 'silent': v:true})
     call nvim_buf_set_keymap(buf, 'n', 'J', '<cmd>call Move("down", 5)<CR>', {'nowait': v:true, 'silent': v:true})
     call nvim_buf_set_keymap(buf, 'n', 'K', '<cmd>call Move("up", 5)<CR>', {'nowait': v:true, 'silent': v:true})
+    call nvim_buf_set_keymap(buf, 'n', '<C-h>', '<Nop>', {'nowait': v:true, 'silent': v:true})
+    call nvim_buf_set_keymap(buf, 'n', '<C-l>', '<Nop>', {'nowait': v:true, 'silent': v:true})
+    call nvim_buf_set_keymap(buf, 'n', 'H', '<Nop>', {'nowait': v:true, 'silent': v:true})
+    call nvim_buf_set_keymap(buf, 'n', 'L', '<Nop>', {'nowait': v:true, 'silent': v:true})
     " 复制/粘贴
     if a:copy_or_paste == 'copy'
         function! Copy(reg, y_command)
