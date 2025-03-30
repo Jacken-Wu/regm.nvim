@@ -27,6 +27,7 @@ call plug#end()
 
 ```vim
 nnoremap <silent> <leader>p :call regm#ShowClipboardRegisters('paste', 'p')<CR>  " 粘贴
+nnoremap <silent> <leader>P :call regm#ShowClipboardRegisters('paste', 'P')<CR>  " 粘~贴
 nnoremap <silent> <leader>yy :call regm#ShowClipboardRegisters('copy', 'yy')<CR>  " 复制行
 nnoremap <silent> <leader>yw :call regm#ShowClipboardRegisters('copy', 'yw')<CR>  " 复制词
 vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR>  " 复制选择的内容

@@ -29,6 +29,7 @@ You can use the following mappings to use this plugin:
 
 ```vim
 nnoremap <silent> <leader>p :call regm#ShowClipboardRegisters('paste', 'p')<CR>  " paste
+nnoremap <silent> <leader>P :call regm#ShowClipboardRegisters('paste', 'P')<CR>  " Paste
 nnoremap <silent> <leader>yy :call regm#ShowClipboardRegisters('copy', 'yy')<CR>  " copy a line
 nnoremap <silent> <leader>yw :call regm#ShowClipboardRegisters('copy', 'yw')<CR>  " copy a word
 vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR>  " copy a visual selection
