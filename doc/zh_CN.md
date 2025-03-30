@@ -2,6 +2,10 @@
 
 **我的代码写的很烂，可能有很多bug，请谨慎使用**
 
+**此插件仅适用于 Neovim，在 Vim 中不起作用。因为我使用 nvim_win_open() 创建浮动窗口，而 Vim 不支持此功能。**
+
+https://github.com/user-attachments/assets/4b20935a-e062-452f-85d3-872c8339495c
+
 ## 这个插件能做什么？
 
 这个插件也许可以提升你在 Neovim 中使用寄存器时的体验。
