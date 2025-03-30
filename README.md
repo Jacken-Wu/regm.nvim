@@ -2,7 +2,7 @@
 
 **My code is terrible and may have some bugs, please use it with caution.**
 
-https://github.com/user-attachments/assets/2f624e64-9348-4d59-b89f-7daee326f7cc
+https://github.com/user-attachments/assets/4b20935a-e062-452f-85d3-872c8339495c
 
 [中文请点我](./doc/zh_CN.md)
 
@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/2f624e64-9348-4d59-b89f-7daee326f7cc
 
 This plugin may enhance your experience of using registers in Neovim.
 
-When you copy or paste something by this plugin, it will show a list of registers, and you can choose which register to use.
+When you copy or paste something using this plugin, it will show a list of registers, and you can choose which register to use.
 
 ## Install
 
