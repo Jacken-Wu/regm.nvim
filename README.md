@@ -2,6 +2,8 @@
 
 **My code is terrible and may have some bugs, please use it with caution.**
 
+https://github.com/user-attachments/assets/2f624e64-9348-4d59-b89f-7daee326f7cc
+
 [中文请点我](./doc/zh_CN.md)
 
 ## What can this plugin do?
