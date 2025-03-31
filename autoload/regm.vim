@@ -31,7 +31,9 @@ function! regm#ShowClipboardRegisters(copy_or_paste, yp_command) abort
 
     " 创建浮动窗口
     let buf = nvim_create_buf(v:false, v:true)
+    call nvim_buf_set_option(buf, 'modifiable', v:true)
     call nvim_buf_set_lines(buf, 0, -1, v:true, l:content)
+    call nvim_buf_set_option(buf, 'modifiable', v:false)
     
     " 窗口配置参数
     let opts = {
