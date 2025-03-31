@@ -30,11 +30,12 @@ call plug#end()
 你可以通过下列映射来使用这个插件：
 
 ```vim
-nnoremap <silent> <leader>p :call regm#ShowClipboardRegisters('paste', 'p')<CR>  " 粘贴
-nnoremap <silent> <leader>P :call regm#ShowClipboardRegisters('paste', 'P')<CR>  " 粘~贴
 nnoremap <silent> <leader>yy :call regm#ShowClipboardRegisters('copy', 'yy')<CR>  " 复制行
 nnoremap <silent> <leader>yw :call regm#ShowClipboardRegisters('copy', 'yw')<CR>  " 复制词
 vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR>  " 复制选择的内容
+nnoremap <silent> <leader>p :call regm#ShowClipboardRegisters('paste', 'p')<CR>  " 粘贴到光标前
+nnoremap <silent> <leader>P :call regm#ShowClipboardRegisters('paste', 'P')<CR>  " 粘贴到光标后
+vnoremap <silent> <leader>p d:call regm#ShowClipboardRegisters('paste', 'P')<CR>  " 替换选择的内容
 ```
 
 函数 `regm#ShowClipboardRegisters(mode, command)` 有两个参数：
@@ -48,3 +49,9 @@ vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR> 
 - 通过 `<C-c>/<Esc>` 来关闭窗口
 - 通过 `<CR>` 来选择当前寄存器
 - 通过 `寄存器名` 来选择寄存器（比如通过按下 `a` 来选择 `a` 寄存器）
+
+你可以通过更改 `g:regm_clipboard_registers` 的值来自定义要显示的寄存器。默认值是：
+
+```vim
+let g:regm_clipboard_registers = '"0123456789abcdefghijklmnopqrstuvwxyz-*+.:%#/='
+```

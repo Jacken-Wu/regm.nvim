@@ -1,6 +1,9 @@
 function! regm#ShowClipboardRegisters(copy_or_paste, yp_command) abort
     " 定义需要显示的寄存器列表（包括系统剪贴板）
-    let l:reg_list = split('0123456789abcdefghijklmnopqrstuvwxyz"%+*/-:.', '\zs')
+    if !exists('g:regm_clipboard_registers') || g:regm_clipboard_registers == ''
+        let g:regm_clipboard_registers = '"0123456789abcdefghijklmnopqrstuvwxyz-*+.:%#/='
+    endif
+    let l:reg_list = split(g:regm_clipboard_registers, '\zs')
 
     " 窗口大小
     let editor_width = nvim_get_option('columns')

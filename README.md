@@ -32,11 +32,12 @@ call plug#end()
 You can use the following mappings to use this plugin:
 
 ```vim
-nnoremap <silent> <leader>p :call regm#ShowClipboardRegisters('paste', 'p')<CR>  " paste
-nnoremap <silent> <leader>P :call regm#ShowClipboardRegisters('paste', 'P')<CR>  " Paste
 nnoremap <silent> <leader>yy :call regm#ShowClipboardRegisters('copy', 'yy')<CR>  " copy a line
 nnoremap <silent> <leader>yw :call regm#ShowClipboardRegisters('copy', 'yw')<CR>  " copy a word
-vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR>  " copy a visual selection
+vnoremap <silent> <leader>y y:call regm#ShowClipboardRegisters('copy', 'y')<CR>  " copy the selection
+nnoremap <silent> <leader>p :call regm#ShowClipboardRegisters('paste', 'p')<CR>  " paste after the cursor
+nnoremap <silent> <leader>P :call regm#ShowClipboardRegisters('paste', 'P')<CR>  " paste before the cursor
+vnoremap <silent> <leader>p d:call regm#ShowClipboardRegisters('paste', 'P')<CR>  " replace the selection
 ```
 
 The function `regm#ShowClipboardRegisters(mode, command)` has two arguments:
@@ -50,3 +51,9 @@ When this function runs, it will open a floating window that lists all non-empty
 - use `<C-c>/<Esc>` to close the window
 - use `<CR>` to select the current register
 - use `register name` to select a register by name (for example, you can type `a` to select the `a` register)
+
+You can change the value of `g:regm_clipboard_registers` to customize which registers to show. The default value is:
+
+```vim
+let g:regm_clipboard_registers = '"0123456789abcdefghijklmnopqrstuvwxyz-*+.:%#/='
+```
